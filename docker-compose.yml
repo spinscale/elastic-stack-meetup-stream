@@ -1,0 +1,47 @@
+---
+version: '3.3'
+
+services:
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:${ELASTIC_STACK_VERSION}
+    container_name: elasticsearch
+    networks: ['stack']
+    ports: [ '127.0.0.1:9200:9200' ]
+    environment:
+      - node.name=es01
+      - cluster.initial_master_nodes=es01
+      - cluster.name=my-meetups-cluster
+      - http.host=0.0.0.0
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:9200/_cat/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+
+
+  kibana:
+    image: docker.elastic.co/kibana/kibana:${ELASTIC_STACK_VERSION}
+    hostname: kibana
+    container_name: kibana
+    ports: [ '127.0.0.1:5601:5601' ]
+    networks: ['stack']
+    depends_on: [ 'elasticsearch' ]
+
+
+  filebeat:
+    image: docker.elastic.co/beats/filebeat:${ELASTIC_STACK_VERSION}
+    container_name: filebeat
+    networks: ['stack']
+    depends_on: [ 'kibana' ]
+    command: "bash -c 'curl -s http://stream.meetup.com/2/rsvps | filebeat -e'"
+    volumes:
+      - './filebeat.yml:/usr/share/filebeat/filebeat.yml:ro'
+      - './dashboard.json:/dashboards/7/dashboard/dashboard.json:ro'
+    restart: on-failure
+    healthcheck:
+      test: filebeat test config
+      interval: 30s
+      timeout: 15s
+      retries: 5
+ 
+networks: {stack: {}}

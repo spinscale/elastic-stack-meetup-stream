@@ -1,0 +1,42 @@
+name: filebeat-meetups
+
+# we will pipe the curl output into filebeat stdin
+filebeat.inputs:
+  - type: stdin
+    json.keys_under_root: true
+    json.add_error_key: true
+ 
+setup.ilm.enabled: false
+setup.kibana.host: "http://kibana:5601"
+setup.dashboards.directory: "/dashboards"
+
+# add geo fields to existing index template
+setup.template.overwrite: true
+setup.template.append_fields:
+- name: venue.location
+  type: geo_point
+- name: group.location
+  type: geo_point
+
+processors:
+  - rename:
+      ignore_missing: true
+      fields:
+        - from: "group.group_lat"
+          to: "group.location.lat"
+        - from: "group.group_lon"
+          to: "group.location.lon"
+      when:
+        has_fields: ['group.group_lat', 'group.group_lon']
+  - rename:
+      ignore_missing: true
+      fields:
+        - from: "venue.lat"
+          to: "venue.location.lat"
+        - from: "venue.lon"
+          to: "venue.location.lon"
+      when:
+        has_fields: ['venue.lat', 'venue.lon']
+
+output.elasticsearch:
+  hosts: ["http://elasticsearch:9200"]
