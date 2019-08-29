@@ -37,6 +37,9 @@ processors:
           to: "venue.location.lon"
       when:
         has_fields: ['venue.lat', 'venue.lon']
+  # remove all the beat specific fields, just have the meetup data
+  - drop_fields:
+      fields: [ "log", "agent", "host", "input", "ecs" ]
 
 output.elasticsearch:
   hosts: ["http://elasticsearch:9200"]
