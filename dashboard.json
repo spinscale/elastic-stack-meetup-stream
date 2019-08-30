@@ -9,7 +9,13 @@
         },
         "optionsJSON": "{\"hidePanelTitles\":false,\"useMargins\":true}",
         "panelsJSON": "[{\"embeddableConfig\":{\"mapCenter\":[41.10574311993223,-46.03614807128907],\"mapZoom\":4},\"gridData\":{\"x\":0,\"y\":0,\"w\":48,\"h\":24,\"i\":\"1\"},\"panelIndex\":\"1\",\"version\":\"7.3.0\",\"panelRefName\":\"panel_0\"},{\"gridData\":{\"x\":0,\"y\":24,\"w\":48,\"h\":15,\"i\":\"2\"},\"version\":\"7.3.0\",\"panelIndex\":\"2\",\"embeddableConfig\":{},\"panelRefName\":\"panel_1\"},{\"gridData\":{\"x\":0,\"y\":39,\"w\":26,\"h\":15,\"i\":\"3\"},\"version\":\"7.3.0\",\"panelIndex\":\"3\",\"embeddableConfig\":{},\"panelRefName\":\"panel_2\"},{\"gridData\":{\"x\":26,\"y\":39,\"w\":22,\"h\":15,\"i\":\"4\"},\"version\":\"7.3.0\",\"panelIndex\":\"4\",\"embeddableConfig\":{},\"panelRefName\":\"panel_3\"},{\"gridData\":{\"x\":0,\"y\":54,\"w\":10,\"h\":16,\"i\":\"5\"},\"version\":\"7.3.0\",\"panelIndex\":\"5\",\"embeddableConfig\":{},\"panelRefName\":\"panel_4\"}]",
-        "timeRestore": false,
+        "refreshInterval": {
+          "pause": false,
+          "value": 60000
+        },
+        "timeFrom": "now-15m",
+        "timeRestore": true,
+        "timeTo": "now",
         "title": "Meetups Dashboard",
         "version": 1
       },
