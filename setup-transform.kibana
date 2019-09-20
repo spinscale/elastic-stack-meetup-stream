@@ -1,0 +1,130 @@
+# this creates a data transform that runs regularly
+# a new meetups index is created that contains one document per event
+# each event some meetup/location info as well as the number of RSVPs and guests
+
+POST _data_frame/transforms/meetup-transform/_stop
+
+DELETE _data_frame/transforms/meetup-transform
+
+DELETE meetups
+
+PUT meetups
+{
+  "mappings": {
+    "properties": {
+      "event" : {
+        "properties": {
+          "name" : {
+            "type" : "text",
+            "fields" : {
+              "keyword" : {
+                "type" : "keyword"
+              }
+            }
+          },
+          "venue" : {
+            "type" : "text",
+            "fields" : {
+              "keyword" : {
+                "type" : "keyword"
+              }
+            }
+          }
+        }
+      },
+      "group" : {
+        "properties": {
+          "city" : {
+            "type" : "text",
+            "fields" : {
+              "keyword" : {
+                "type" : "keyword"
+              }
+            }
+          },
+          "name" : {
+            "type" : "text",
+            "fields" : {
+              "keyword" : {
+                "type" : "keyword"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+PUT _data_frame/transforms/meetup-transform
+{
+  "source": {
+    "index": [
+      "filebeat-*"
+    ],
+    "query": {
+      "match_all": {}
+    }
+  },
+  "dest": {
+    "index": "meetups"
+  },
+  "pivot": {
+    "group_by": {
+      "group.name": {
+        "terms": {
+          "field": "group.group_name"
+        }
+      },
+      "group.state": {
+        "terms": {
+          "field": "group.group_state"
+        }
+      },
+      "group.city": {
+        "terms": {
+          "field": "group.group_city"
+        }
+      },
+      "event.name": {
+        "terms": {
+          "field": "event.event_name"
+        }
+      },
+      "event.url": {
+        "terms": {
+          "field": "event.event_url"
+        }
+      },
+      "event.venue": {
+        "terms": {
+          "field": "venue.venue_name"
+        }
+      }
+    },
+    "aggregations": {
+      "guests.sum": {
+        "sum": {
+          "field": "guests"
+        }
+      },
+      "member.member_id.value_count": {
+        "value_count": {
+          "field": "member.member_id"
+        }
+      }
+    }
+  },
+  "description": "Count meetup reservations per meetup",
+  "frequency": "1m",
+  "sync": {
+    "time": {
+      "field": "@timestamp",
+      "delay": "60s"
+    }
+  }
+}
+
+POST _data_frame/transforms/meetup-transform/_start
+
