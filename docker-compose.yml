@@ -4,7 +4,8 @@ version: '3.3'
 services:
   elasticsearch:
     image: docker.elastic.co/elasticsearch/elasticsearch:${ELASTIC_STACK_VERSION}
-    container_name: elasticsearch
+    hostname: elasticsearch
+    container_name: elasticsearch-meetups
     networks: ['stack']
     ports: [ '127.0.0.1:9200:9200' ]
     environment:
@@ -22,7 +23,7 @@ services:
   kibana:
     image: docker.elastic.co/kibana/kibana:${ELASTIC_STACK_VERSION}
     hostname: kibana
-    container_name: kibana
+    container_name: kibana-meetups
     ports: [ '127.0.0.1:5601:5601' ]
     networks: ['stack']
     depends_on: [ 'elasticsearch' ]
@@ -30,7 +31,7 @@ services:
 
   filebeat:
     image: docker.elastic.co/beats/filebeat:${ELASTIC_STACK_VERSION}
-    container_name: filebeat
+    container_name: filebeat-meetups
     networks: ['stack']
     depends_on: [ 'kibana' ]
     command: "bash -c 'curl -s http://stream.meetup.com/2/rsvps | filebeat -e'"
