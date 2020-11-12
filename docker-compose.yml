@@ -34,7 +34,7 @@ services:
     container_name: filebeat-meetups
     networks: ['stack']
     depends_on: [ 'kibana' ]
-    command: "bash -c 'curl -s http://stream.meetup.com/2/rsvps | filebeat -e'"
+    command: "bash -c 'curl -s https://stream.meetup.com:443/2/rsvps | filebeat -e'"
     volumes:
       - './filebeat.yml:/usr/share/filebeat/filebeat.yml:ro'
       - './dashboard.json:/dashboards/7/dashboard/dashboard.json:ro'

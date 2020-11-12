@@ -1,60 +1,71 @@
 {
+  "version": "7.10.0",
   "objects": [
     {
+      "id": "4a80e870-c98b-11e9-8b2a-494e8b8edfe8",
+      "type": "dashboard",
+      "namespaces": [
+        "default"
+      ],
+      "updated_at": "2020-11-12T09:45:31.214Z",
+      "version": "Wzk5LDFd",
       "attributes": {
-        "description": "",
+        "title": "Meetups Dashboard",
         "hits": 0,
-        "kibanaSavedObjectMeta": {
-          "searchSourceJSON": "{\"query\":{\"language\":\"kuery\",\"query\":\"\"},\"filter\":[]}"
-        },
+        "description": "",
+        "panelsJSON": "[{\"version\":\"7.10.0\",\"gridData\":{\"x\":0,\"y\":0,\"w\":48,\"h\":24,\"i\":\"1\"},\"panelIndex\":\"1\",\"embeddableConfig\":{\"mapCenter\":[41.10574311993223,-46.03614807128907],\"mapZoom\":4},\"panelRefName\":\"panel_0\"},{\"version\":\"7.10.0\",\"gridData\":{\"x\":0,\"y\":24,\"w\":48,\"h\":15,\"i\":\"2\"},\"panelIndex\":\"2\",\"embeddableConfig\":{\"vis\":null},\"panelRefName\":\"panel_1\"},{\"version\":\"7.10.0\",\"gridData\":{\"x\":0,\"y\":39,\"w\":26,\"h\":15,\"i\":\"3\"},\"panelIndex\":\"3\",\"embeddableConfig\":{},\"panelRefName\":\"panel_2\"},{\"version\":\"7.10.0\",\"gridData\":{\"x\":0,\"y\":54,\"w\":10,\"h\":16,\"i\":\"5\"},\"panelIndex\":\"5\",\"embeddableConfig\":{},\"panelRefName\":\"panel_3\"},{\"version\":\"7.10.0\",\"gridData\":{\"x\":26,\"y\":39,\"w\":22,\"h\":15,\"i\":\"b236ee5c-7628-4cbc-b75d-66d12a5c1bc7\"},\"panelIndex\":\"b236ee5c-7628-4cbc-b75d-66d12a5c1bc7\",\"embeddableConfig\":{},\"panelRefName\":\"panel_4\"}]",
         "optionsJSON": "{\"hidePanelTitles\":false,\"useMargins\":true}",
-        "panelsJSON": "[{\"embeddableConfig\":{\"mapCenter\":[41.10574311993223,-46.03614807128907],\"mapZoom\":4},\"gridData\":{\"x\":0,\"y\":0,\"w\":48,\"h\":24,\"i\":\"1\"},\"panelIndex\":\"1\",\"version\":\"7.3.0\",\"panelRefName\":\"panel_0\"},{\"gridData\":{\"x\":0,\"y\":24,\"w\":48,\"h\":15,\"i\":\"2\"},\"version\":\"7.3.0\",\"panelIndex\":\"2\",\"embeddableConfig\":{},\"panelRefName\":\"panel_1\"},{\"gridData\":{\"x\":0,\"y\":39,\"w\":26,\"h\":15,\"i\":\"3\"},\"version\":\"7.3.0\",\"panelIndex\":\"3\",\"embeddableConfig\":{},\"panelRefName\":\"panel_2\"},{\"gridData\":{\"x\":26,\"y\":39,\"w\":22,\"h\":15,\"i\":\"4\"},\"version\":\"7.3.0\",\"panelIndex\":\"4\",\"embeddableConfig\":{},\"panelRefName\":\"panel_3\"},{\"gridData\":{\"x\":0,\"y\":54,\"w\":10,\"h\":16,\"i\":\"5\"},\"version\":\"7.3.0\",\"panelIndex\":\"5\",\"embeddableConfig\":{},\"panelRefName\":\"panel_4\"}]",
+        "version": 1,
+        "timeRestore": true,
+        "timeTo": "now",
+        "timeFrom": "now-15m",
         "refreshInterval": {
           "pause": false,
           "value": 60000
         },
-        "timeFrom": "now-15m",
-        "timeRestore": true,
-        "timeTo": "now",
-        "title": "Meetups Dashboard",
-        "version": 1
-      },
-      "id": "4a80e870-c98b-11e9-8b2a-494e8b8edfe8",
-      "migrationVersion": {
-        "dashboard": "7.3.0"
+        "kibanaSavedObjectMeta": {
+          "searchSourceJSON": "{\"query\":{\"language\":\"kuery\",\"query\":\"\"},\"filter\":[]}"
+        }
       },
       "references": [
         {
-          "id": "369321c0-c98b-11e9-8b2a-494e8b8edfe8",
           "name": "panel_0",
-          "type": "visualization"
+          "type": "visualization",
+          "id": "369321c0-c98b-11e9-8b2a-494e8b8edfe8"
         },
         {
-          "id": "97dddb00-c995-11e9-b815-bdd2eda1a4a9",
           "name": "panel_1",
-          "type": "visualization"
+          "type": "visualization",
+          "id": "97dddb00-c995-11e9-b815-bdd2eda1a4a9"
         },
         {
-          "id": "eb3e0090-c995-11e9-b815-bdd2eda1a4a9",
           "name": "panel_2",
-          "type": "visualization"
+          "type": "visualization",
+          "id": "eb3e0090-c995-11e9-b815-bdd2eda1a4a9"
         },
         {
-          "id": "b74fef50-c995-11e9-b815-bdd2eda1a4a9",
           "name": "panel_3",
-          "type": "visualization"
+          "type": "visualization",
+          "id": "4ef4b1c0-c995-11e9-b815-bdd2eda1a4a9"
         },
         {
-          "id": "4ef4b1c0-c995-11e9-b815-bdd2eda1a4a9",
           "name": "panel_4",
-          "type": "visualization"
+          "type": "visualization",
+          "id": "935563e0-24cb-11eb-91bd-f998c069fc5d"
         }
       ],
-      "type": "dashboard",
-      "updated_at": "2019-08-28T13:17:16.413Z",
-      "version": "WzEzLDFd"
+      "migrationVersion": {
+        "dashboard": "7.9.3"
+      }
     },
     {
+      "id": "369321c0-c98b-11e9-8b2a-494e8b8edfe8",
+      "type": "visualization",
+      "namespaces": [
+        "default"
+      ],
+      "updated_at": "2020-11-12T09:34:36.092Z",
+      "version": "WzEwLDFd",
       "attributes": {
         "description": "",
         "kibanaSavedObjectMeta": {
@@ -65,16 +76,19 @@
         "version": 1,
         "visState": "{\"title\":\"Meetups - geo map\",\"type\":\"tile_map\",\"params\":{\"colorSchema\":\"Yellow to Red\",\"mapType\":\"Scaled Circle Markers\",\"isDesaturated\":true,\"addTooltip\":true,\"heatClusterSize\":1.5,\"legendPosition\":\"bottomright\",\"mapZoom\":2,\"mapCenter\":[0,0],\"wms\":{\"enabled\":false,\"options\":{\"format\":\"image/png\",\"transparent\":true}},\"dimensions\":{\"metric\":{\"accessor\":0,\"format\":{\"id\":\"number\"},\"params\":{},\"aggType\":\"count\"},\"geohash\":null,\"geocentroid\":null}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"geohash_grid\",\"schema\":\"segment\",\"params\":{\"field\":\"group.location\",\"autoPrecision\":true,\"precision\":2,\"useGeocentroid\":true,\"isFilteredByCollar\":true,\"mapZoom\":2,\"mapCenter\":[0,0]}}]}"
       },
-      "id": "369321c0-c98b-11e9-8b2a-494e8b8edfe8",
-      "migrationVersion": {
-        "visualization": "7.3.0"
-      },
       "references": [],
-      "type": "visualization",
-      "updated_at": "2019-08-28T13:08:18.808Z",
-      "version": "WzUsMV0="
+      "migrationVersion": {
+        "visualization": "7.10.0"
+      }
     },
     {
+      "id": "97dddb00-c995-11e9-b815-bdd2eda1a4a9",
+      "type": "visualization",
+      "namespaces": [
+        "default"
+      ],
+      "updated_at": "2020-11-12T09:34:36.092Z",
+      "version": "WzExLDFd",
       "attributes": {
         "description": "",
         "kibanaSavedObjectMeta": {
@@ -85,15 +99,19 @@
         "version": 1,
         "visState": "{\"title\":\"Meetups - heat map by country\",\"type\":\"heatmap\",\"params\":{\"type\":\"heatmap\",\"addTooltip\":true,\"addLegend\":true,\"enableHover\":false,\"legendPosition\":\"right\",\"times\":[],\"colorsNumber\":4,\"colorSchema\":\"Greens\",\"setColorRange\":false,\"colorsRange\":[],\"invertColors\":false,\"percentageMode\":false,\"valueAxes\":[{\"show\":false,\"id\":\"ValueAxis-1\",\"type\":\"value\",\"scale\":{\"type\":\"linear\",\"defaultYExtents\":false},\"labels\":{\"show\":false,\"rotate\":0,\"overwriteColor\":false,\"color\":\"black\"}}],\"dimensions\":{\"x\":null,\"y\":[{\"accessor\":1,\"format\":{\"id\":\"number\"},\"params\":{},\"aggType\":\"count\"}],\"series\":[{\"accessor\":0,\"format\":{\"id\":\"terms\",\"params\":{\"id\":\"string\",\"otherBucketLabel\":\"Other\",\"missingBucketLabel\":\"Missing\"}},\"params\":{},\"aggType\":\"terms\"}]}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"group\",\"params\":{\"field\":\"group.group_country\",\"orderBy\":\"1\",\"order\":\"desc\",\"size\":10,\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\"}},{\"id\":\"3\",\"enabled\":true,\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"@timestamp\",\"useNormalizedEsInterval\":true,\"interval\":\"m\",\"drop_partials\":false,\"min_doc_count\":1,\"extended_bounds\":{}}}]}"
       },
-      "id": "97dddb00-c995-11e9-b815-bdd2eda1a4a9",
+      "references": [],
       "migrationVersion": {
-        "visualization": "7.3.0"
-      },
-      "type": "visualization",
-      "updated_at": "2019-08-28T13:13:14.671Z",
-      "version": "WzEwLDFd"
+        "visualization": "7.10.0"
+      }
     },
     {
+      "id": "eb3e0090-c995-11e9-b815-bdd2eda1a4a9",
+      "type": "visualization",
+      "namespaces": [
+        "default"
+      ],
+      "updated_at": "2020-11-12T09:34:36.092Z",
+      "version": "WzEyLDFd",
       "attributes": {
         "description": "",
         "kibanaSavedObjectMeta": {
@@ -104,34 +122,19 @@
         "version": 1,
         "visState": "{\"title\":\"Meetups - guests\",\"type\":\"histogram\",\"params\":{\"type\":\"histogram\",\"grid\":{\"categoryLines\":false},\"categoryAxes\":[{\"id\":\"CategoryAxis-1\",\"type\":\"category\",\"position\":\"bottom\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\"},\"labels\":{\"show\":true,\"filter\":true,\"truncate\":100},\"title\":{}}],\"valueAxes\":[{\"id\":\"ValueAxis-1\",\"name\":\"LeftAxis-1\",\"type\":\"value\",\"position\":\"left\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\",\"mode\":\"normal\"},\"labels\":{\"show\":true,\"rotate\":0,\"filter\":false,\"truncate\":100},\"title\":{\"text\":\"Count\"}}],\"seriesParams\":[{\"show\":\"true\",\"type\":\"histogram\",\"mode\":\"stacked\",\"data\":{\"label\":\"Count\",\"id\":\"1\"},\"valueAxis\":\"ValueAxis-1\",\"drawLinesBetweenPoints\":true,\"showCircles\":true}],\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"times\":[],\"addTimeMarker\":false,\"labels\":{\"show\":false},\"dimensions\":{\"x\":null,\"y\":[{\"accessor\":0,\"format\":{\"id\":\"number\"},\"params\":{},\"aggType\":\"count\"}]}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"guests\",\"interval\":1,\"min_doc_count\":false,\"has_extended_bounds\":false,\"extended_bounds\":{\"min\":\"\",\"max\":\"\"}}}]}"
       },
-      "id": "eb3e0090-c995-11e9-b815-bdd2eda1a4a9",
+      "references": [],
       "migrationVersion": {
-        "visualization": "7.3.0"
-      },
-      "type": "visualization",
-      "updated_at": "2019-08-28T13:15:34.553Z",
-      "version": "WzEyLDFd"
+        "visualization": "7.10.0"
+      }
     },
     {
-      "attributes": {
-        "description": "",
-        "kibanaSavedObjectMeta": {
-          "searchSourceJSON": "{\"query\":{\"query\":\"\",\"language\":\"kuery\"},\"filter\":[],\"index\":\"filebeat-*\"}"
-        },
-        "title": "Meetups - tag cloud by city",
-        "uiStateJSON": "{}",
-        "version": 1,
-        "visState": "{\"title\":\"Meetups - tag cloud by city\",\"type\":\"tagcloud\",\"params\":{\"scale\":\"linear\",\"orientation\":\"single\",\"minFontSize\":18,\"maxFontSize\":72,\"showLabel\":true,\"metric\":{\"type\":\"vis_dimension\",\"accessor\":1,\"format\":{\"id\":\"string\",\"params\":{}}},\"bucket\":{\"type\":\"vis_dimension\",\"accessor\":0,\"format\":{\"id\":\"terms\",\"params\":{\"id\":\"string\",\"otherBucketLabel\":\"Other\",\"missingBucketLabel\":\"Missing\"}}}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"group.group_city\",\"orderBy\":\"1\",\"order\":\"desc\",\"size\":20,\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\"}}]}"
-      },
-      "id": "b74fef50-c995-11e9-b815-bdd2eda1a4a9",
-      "migrationVersion": {
-        "visualization": "7.3.0"
-      },
+      "id": "4ef4b1c0-c995-11e9-b815-bdd2eda1a4a9",
       "type": "visualization",
-      "updated_at": "2019-08-28T13:14:07.429Z",
-      "version": "WzExLDFd"
-    },
-    {
+      "namespaces": [
+        "default"
+      ],
+      "updated_at": "2020-11-12T09:34:36.092Z",
+      "version": "WzE0LDFd",
       "attributes": {
         "description": "",
         "kibanaSavedObjectMeta": {
@@ -142,14 +145,39 @@
         "version": 1,
         "visState": "{\"title\":\"Meetups - data table by country\",\"type\":\"table\",\"params\":{\"perPage\":10,\"showPartialRows\":false,\"showMetricsAtAllLevels\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"showTotal\":false,\"totalFunc\":\"sum\",\"dimensions\":{\"metrics\":[{\"accessor\":0,\"format\":{\"id\":\"number\"},\"params\":{},\"aggType\":\"count\"}],\"buckets\":[]}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"group.group_country\",\"orderBy\":\"1\",\"order\":\"desc\",\"size\":10,\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\"}}]}"
       },
-      "id": "4ef4b1c0-c995-11e9-b815-bdd2eda1a4a9",
+      "references": [],
       "migrationVersion": {
-        "visualization": "7.3.0"
-      },
+        "visualization": "7.10.0"
+      }
+    },
+    {
+      "id": "935563e0-24cb-11eb-91bd-f998c069fc5d",
       "type": "visualization",
-      "updated_at": "2019-08-28T13:11:12.347Z",
-      "version": "WzksMV0="
+      "namespaces": [
+        "default"
+      ],
+      "updated_at": "2020-11-12T09:44:33.625Z",
+      "version": "Wzg4LDFd",
+      "attributes": {
+        "title": "Meetups - Tagcloud by city",
+        "visState": "{\"title\":\"Meetups - Tagcloud by city\",\"type\":\"tagcloud\",\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"params\":{},\"schema\":\"metric\"},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"params\":{\"field\":\"group.group_city\",\"orderBy\":\"1\",\"order\":\"desc\",\"size\":20,\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\"},\"schema\":\"segment\"}],\"params\":{\"maxFontSize\":72,\"minFontSize\":18,\"orientation\":\"single\",\"scale\":\"linear\",\"showLabel\":true}}",
+        "uiStateJSON": "{}",
+        "description": "",
+        "version": 1,
+        "kibanaSavedObjectMeta": {
+          "searchSourceJSON": "{\"query\":{\"language\":\"kuery\",\"query\":\"\"},\"filter\":[],\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.index\"}"
+        }
+      },
+      "references": [
+        {
+          "name": "kibanaSavedObjectMeta.searchSourceJSON.index",
+          "type": "index-pattern",
+          "id": "filebeat-*"
+        }
+      ],
+      "migrationVersion": {
+        "visualization": "7.10.0"
+      }
     }
-  ],
-  "version": "7.3.0"
+  ]
 }
